@@ -1,0 +1,5 @@
+services:
+    command.deploy:
+        class: Mukharem\Deploy\Command\Deploy
+        arguments:
+            - '@operation.deploy.operation'

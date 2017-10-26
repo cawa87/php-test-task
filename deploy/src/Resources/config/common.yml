@@ -1,0 +1,16 @@
+services:
+    bash.local_executor:
+        class: Mukharem\Deploy\Bash\LocalExecutor
+
+    bash.ssh_executor:
+        class: Mukharem\Deploy\Bash\SshExecutor
+        arguments:
+            - '@ssh.connection'
+
+    ssh.connection:
+        arguments:
+            - '%ssh.host%'
+            - '%ssh.port%'
+            - '%ssh.user%'
+            - '%ssh.pass%'
+        factory: ['Mukharem\Deploy\Ssh\ConnectFactory', create]

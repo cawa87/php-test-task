@@ -1,0 +1,23 @@
+services:
+    operation.deploy.operation:
+        class: Mukharem\Deploy\Operation\Common\OperationChain
+        arguments:
+            -
+                - '@operation.build_package.operation'
+                - '@operation.switch_version.operation'
+
+    operation.build_package.operation:
+        class: Mukharem\Deploy\Operation\BuildPackage\Operation
+        arguments:
+            #- '@bash.ssh_executor'
+            - '@bash.local_executor'
+            - '%remote_host.package_path%'
+            - '%remote_host.vcs_path%'
+
+    operation.switch_version.operation:
+        class: Mukharem\Deploy\Operation\SwithVersion\Operation
+        arguments:
+            #- '@bash.ssh_executor'
+            - '@bash.local_executor'
+            - '%remote_host.package_path%'
+            - '%remote_host.application_path%'
