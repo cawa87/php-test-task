@@ -1,0 +1,9 @@
+parameters:
+    ssh.host: ''
+    ssh.port: 22
+    ssh.user: ''
+    ssh.pass: ''
+
+    remote_host.application_path: '/Users/ismailov/ronte_test/current'
+    remote_host.package_path: '/Users/ismailov/ronte_test'
+    remote_host.vcs_path: 'git@github.com:ronte-ltd/JsonApiBundle.git'
