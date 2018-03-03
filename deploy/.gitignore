@@ -1,0 +1,15 @@
+.vagrant/
+vendor/
+data/*
+
+phpunit.xml
+composer.lock
+
+
+# IDE Project files
+/.idea
+/.settings/
+/logs/
+.buildpath
+.project
+.DS_Store

@@ -1,0 +1,12 @@
+{
+    "name": "kainlegend/deploy_v1",
+    "authors": [
+        {
+            "name": "Rusakov Slava",
+            "email": "rusakovslava@gmail.com"
+        }
+    ],
+    "require": {
+        "zendframework/zend-config": "^3.1"
+    }
+}
