@@ -1,0 +1,20 @@
+# Project Configuration
+server:
+    env: 'local'
+    path: '/var/www/project'
+
+params:
+    dir: '/var/sources/project'
+
+git:
+    url: 'https://github.com/CawaKharkov/php-test-task.git'
+    branch: 'master'
+    user: '%git_user%'
+    key: '~/.ssh/id_rsa'
+
+npm:
+    path: '%npm_path%'
+
+composer:
+    path: '%composer_path%'
+
